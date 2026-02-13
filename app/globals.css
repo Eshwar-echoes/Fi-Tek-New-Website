@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand & Accent */
+  --brand-primary: #005499;
+  --brand-accent: #22c55e;
+  --brand-accent-hover: #1d4ed8;
+  --brand-secondary: #f59e0b;
+  --brand-logo-blue: #3b82f6;
+  --brand-logo-black: #000000;
+  --brand-logo-gray: #A9A9A9;
+
+  /* Surface / Background */
+  --surface-base: #ffffff;
+  --surface-muted: #f8fafc;
+  --surface-inverse: #0a0a0a;
+  --surface-alt: #111827;
+  --surface-footer: #223035;
+  --surface-black: #000000;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #525252;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+  --text-black: #000000;
+  --text-light: #e5e7eb;
+
+  /* Border / Divider */
+  --border-subtle: #e5e7eb;
+  --border-strong: #22262c;
+
+  /* Overlay / Scrim */
+  --overlay-light: rgba(0,0,0,0.35);
+  --overlay-medium: rgba(0,0,0,0.55);
+  --overlay-heavy: rgba(0,0,0,0.7);
+  --overlay-white-strong: rgba(255,255,255,0.9);
+  --overlay-white-soft: rgba(255,255,255,0.4);
+  --overlay-blue: rgba(59,130,246,0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-base: #0a0a0a;
+    --surface-muted: #111827;
+    --surface-inverse: #ffffff;
+    --surface-footer: #223035;
+    --surface-black: #000000;
+
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --text-muted: #475569;
+    --text-inverse: #0f172a;
+    --text-black: #ffffff;
+    --text-light: #e5e7eb;
+
+    --border-subtle: #22262c;
+    --border-strong: #e5e7eb;
+  }
+}
+
+body {
+  background: var(--surface-base);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.65;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.marquee-wrapper:hover .marquee-track,
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+
