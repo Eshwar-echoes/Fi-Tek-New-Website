@@ -1,26 +1,22 @@
-import * as fitektHome from "@/content/client/fitek/home";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ProofSection } from "@/components/sections/ProofSection";
-import { ContactHeroSection } from "@/components/sections/ContactHeroSection";
-import { CompactShowcaseSection } from "@/components/sections/CompactShowcaseSection";
-import { ServicesSliderSection } from "@/components/sections/ServicesSliderSection";
-import { FinanceFeatureSection } from "@/components/sections/FinanceFeatureSection";
-import { AboutInfrastructureSection } from "@/components/sections/AboutInfrastructureSection";
-import { aboutInfrastructure } from "@/content/client/fitek/aboutInfrastructure";
+import { homeEnterprise } from "@/content/client/fitek/homeEnterprise";
+import { EnterpriseHeroSection } from "@/components/sections/home-enterprise/EnterpriseHeroSection";
+import { SegmentSplitSection } from "@/components/sections/home-enterprise/SegmentSplitSection";
+import { AdvisorWorkflowSection } from "@/components/sections/home-enterprise/AdvisorWorkflowSection";
+import { PlatformFlowSection } from "@/components/sections/home-enterprise/PlatformFlowSection";
+import { CapabilitiesGridSection } from "@/components/sections/home-enterprise/CapabilitiesGridSection";
+import { EnterpriseProofSection } from "@/components/sections/home-enterprise/EnterpriseProofSection";
+import { EnterpriseFinalCtaSection } from "@/components/sections/home-enterprise/EnterpriseFinalCtaSection";
 
 export default function HomePage() {
   return (
-    <>
-      <HeroSection data={fitektHome.hero} />
-      <ProofSection data={fitektHome.proof} />
-      <ServicesSliderSection data={fitektHome.servicesSliderSectionData} />
-      <CompactShowcaseSection data={fitektHome.compactShowcaseSectionDemo} />
-      <FinanceFeatureSection data={fitektHome.financeFeatureSectionData} />
-      <AboutInfrastructureSection data={aboutInfrastructure} />
-      {/* <DifferentiatorsSection data={fitektHome.differentiators} /> */}
-      {/* <ContactSection data={fitektHome.contact} /> */}
-      <ContactHeroSection data={fitektHome.contact} />
-    </>
+    <div className="leroux-home">
+      <EnterpriseHeroSection data={homeEnterprise.hero} />
+      <SegmentSplitSection data={homeEnterprise.segmentSplit} />
+      <AdvisorWorkflowSection data={homeEnterprise.workflow} />
+      <PlatformFlowSection data={homeEnterprise.platformFlow} />
+      <CapabilitiesGridSection data={homeEnterprise.capabilities} />
+      <EnterpriseProofSection data={homeEnterprise.proof} />
+      <EnterpriseFinalCtaSection data={homeEnterprise.finalCta} />
+    </div>
   );
 }
-

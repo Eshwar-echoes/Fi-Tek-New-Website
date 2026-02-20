@@ -37,6 +37,75 @@
   --overlay-white-strong: rgba(255,255,255,0.9);
   --overlay-white-soft: rgba(255,255,255,0.4);
   --overlay-blue: rgba(59,130,246,0.6);
+
+  /* Leroux Home Tokens (Light) */
+  --leroux-split-start: #ffffff;
+  --leroux-split-end: #f7f7f5;
+  --leroux-workflow-start: #f3f5f8;
+  --leroux-workflow-end: #eceff4;
+  --leroux-capabilities-start: #ffffff;
+  --leroux-capabilities-end: #f4f5f6;
+  --leroux-proof-start: #f7f2e8;
+  --leroux-proof-end: #f2ece2;
+  --leroux-flow-start: #24314d;
+  --leroux-flow-mid: #10182b;
+  --leroux-flow-end: #0a1020;
+  --leroux-cta-start: #1f2c46;
+  --leroux-cta-mid: #0d1425;
+  --leroux-cta-end: #090f1f;
+
+  --leroux-hero-overlay-a: rgba(8, 10, 15, 0.88);
+  --leroux-hero-overlay-b: rgba(8, 10, 15, 0.54);
+  --leroux-hero-overlay-c: rgba(8, 10, 15, 0.78);
+  --leroux-hero-badge-bg: rgba(255, 255, 255, 0.06);
+  --leroux-hero-text: rgba(229, 231, 235, 0.92);
+
+  --leroux-card-border: #d8d2c8;
+  --leroux-card-bg: #ffffff;
+  --leroux-card-shadow: 0 18px 36px rgba(11, 17, 32, 0.06);
+
+  --leroux-dark-border-soft: rgba(255, 255, 255, 0.22);
+  --leroux-dark-border-strong: rgba(255, 255, 255, 0.3);
+  --leroux-dark-panel-border: rgba(255, 255, 255, 0.24);
+  --leroux-dark-panel-bg: rgba(255, 255, 255, 0.04);
+  --leroux-dark-panel-shadow: 0 20px 38px rgba(0, 0, 0, 0.35);
+  --leroux-dark-glass-a: rgba(255, 255, 255, 0.05);
+  --leroux-dark-glass-b: rgba(255, 255, 255, 0.01);
+  --leroux-dark-text-strong: #ffffff;
+  --leroux-dark-text-muted: rgba(229, 231, 235, 0.86);
+  --leroux-dark-text-soft: rgba(229, 231, 235, 0.8);
+
+  --leroux-flow-badge-bg: rgba(255, 255, 255, 0.06);
+  --leroux-flow-badge-border: rgba(255, 255, 255, 0.22);
+  --leroux-flow-badge-text: rgba(229, 231, 235, 0.86);
+  --leroux-flow-spine-surface: rgba(255, 255, 255, 0.14);
+  --leroux-flow-spine-line: rgba(255, 255, 255, 0.26);
+  --leroux-flow-track: rgba(229, 231, 235, 0.5);
+  --leroux-flow-track-active: rgba(255, 255, 255, 0.92);
+  --leroux-flow-track-inactive: rgba(255, 255, 255, 0);
+  --leroux-flow-connector-active: rgba(255, 255, 255, 0.72);
+  --leroux-flow-connector-dim: rgba(255, 255, 255, 0.22);
+  --leroux-flow-connector-default: rgba(255, 255, 255, 0.4);
+  --leroux-flow-label: rgba(229, 231, 235, 0.92);
+  --leroux-flow-node-border-active: rgba(255, 255, 255, 0.95);
+  --leroux-flow-node-border: rgba(229, 231, 235, 0.65);
+  --leroux-flow-node-bg-active: rgba(255, 255, 255, 0.95);
+  --leroux-flow-node-bg: rgba(255, 255, 255, 0.08);
+  --leroux-flow-node-dot-active: rgba(14, 22, 40, 0.95);
+  --leroux-flow-node-dot: rgba(229, 231, 235, 0.78);
+  --leroux-flow-card-active-border: rgba(255, 255, 255, 0.42);
+  --leroux-flow-card-active-bg: rgba(255, 255, 255, 0.14);
+  --leroux-flow-card-border: rgba(255, 255, 255, 0.24);
+  --leroux-flow-card-bg: rgba(255, 255, 255, 0.04);
+
+  --leroux-transform-start: #f6f3ed;
+  --leroux-transform-end: #efebe2;
+  --leroux-transform-chip-bg: #faf8f3;
+  --leroux-transform-tab-bg: rgba(255, 255, 255, 0.04);
+  --leroux-transform-header-bg: rgba(0, 0, 0, 0.04);
+  --leroux-transform-unified-bg: #121a2d;
+  --leroux-transform-unified-border: rgba(255, 255, 255, 0.2);
+  --leroux-transform-unified-text: rgba(229, 231, 235, 0.82);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,6 +125,75 @@
 
     --border-subtle: #22262c;
     --border-strong: #e5e7eb;
+
+    /* Leroux Home Tokens (Dark) */
+    --leroux-split-start: #141b2b;
+    --leroux-split-end: #0f1524;
+    --leroux-workflow-start: #161e31;
+    --leroux-workflow-end: #101726;
+    --leroux-capabilities-start: #12192a;
+    --leroux-capabilities-end: #0e1423;
+    --leroux-proof-start: #1a202f;
+    --leroux-proof-end: #121826;
+    --leroux-flow-start: #2a3a59;
+    --leroux-flow-mid: #151f35;
+    --leroux-flow-end: #0e1529;
+    --leroux-cta-start: #2a3b5a;
+    --leroux-cta-mid: #151f37;
+    --leroux-cta-end: #0d1426;
+
+    --leroux-hero-overlay-a: rgba(4, 6, 10, 0.9);
+    --leroux-hero-overlay-b: rgba(4, 6, 10, 0.62);
+    --leroux-hero-overlay-c: rgba(4, 6, 10, 0.82);
+    --leroux-hero-badge-bg: rgba(255, 255, 255, 0.08);
+    --leroux-hero-text: rgba(229, 231, 235, 0.94);
+
+    --leroux-card-border: rgba(255, 255, 255, 0.2);
+    --leroux-card-bg: rgba(255, 255, 255, 0.04);
+    --leroux-card-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+    --leroux-dark-border-soft: rgba(255, 255, 255, 0.28);
+    --leroux-dark-border-strong: rgba(255, 255, 255, 0.36);
+    --leroux-dark-panel-border: rgba(255, 255, 255, 0.3);
+    --leroux-dark-panel-bg: rgba(255, 255, 255, 0.06);
+    --leroux-dark-panel-shadow: 0 22px 42px rgba(0, 0, 0, 0.45);
+    --leroux-dark-glass-a: rgba(255, 255, 255, 0.08);
+    --leroux-dark-glass-b: rgba(255, 255, 255, 0.02);
+    --leroux-dark-text-strong: #ffffff;
+    --leroux-dark-text-muted: rgba(229, 231, 235, 0.9);
+    --leroux-dark-text-soft: rgba(229, 231, 235, 0.84);
+
+    --leroux-flow-badge-bg: rgba(255, 255, 255, 0.1);
+    --leroux-flow-badge-border: rgba(255, 255, 255, 0.32);
+    --leroux-flow-badge-text: rgba(229, 231, 235, 0.9);
+    --leroux-flow-spine-surface: rgba(255, 255, 255, 0.2);
+    --leroux-flow-spine-line: rgba(255, 255, 255, 0.32);
+    --leroux-flow-track: rgba(229, 231, 235, 0.62);
+    --leroux-flow-track-active: rgba(255, 255, 255, 0.97);
+    --leroux-flow-track-inactive: rgba(255, 255, 255, 0);
+    --leroux-flow-connector-active: rgba(255, 255, 255, 0.82);
+    --leroux-flow-connector-dim: rgba(255, 255, 255, 0.28);
+    --leroux-flow-connector-default: rgba(255, 255, 255, 0.5);
+    --leroux-flow-label: rgba(229, 231, 235, 0.97);
+    --leroux-flow-node-border-active: rgba(255, 255, 255, 0.98);
+    --leroux-flow-node-border: rgba(229, 231, 235, 0.76);
+    --leroux-flow-node-bg-active: rgba(255, 255, 255, 0.98);
+    --leroux-flow-node-bg: rgba(255, 255, 255, 0.12);
+    --leroux-flow-node-dot-active: rgba(16, 24, 40, 0.95);
+    --leroux-flow-node-dot: rgba(229, 231, 235, 0.86);
+    --leroux-flow-card-active-border: rgba(255, 255, 255, 0.52);
+    --leroux-flow-card-active-bg: rgba(255, 255, 255, 0.18);
+    --leroux-flow-card-border: rgba(255, 255, 255, 0.32);
+    --leroux-flow-card-bg: rgba(255, 255, 255, 0.08);
+
+    --leroux-transform-start: #1b2234;
+    --leroux-transform-end: #131a2b;
+    --leroux-transform-chip-bg: rgba(255, 255, 255, 0.08);
+    --leroux-transform-tab-bg: rgba(255, 255, 255, 0.08);
+    --leroux-transform-header-bg: rgba(255, 255, 255, 0.06);
+    --leroux-transform-unified-bg: #17203a;
+    --leroux-transform-unified-border: rgba(255, 255, 255, 0.26);
+    --leroux-transform-unified-text: rgba(229, 231, 235, 0.9);
   }
 }
 
@@ -72,6 +210,18 @@ h3 {
 
 p {
   line-height: 1.65;
+}
+
+.leroux-home h1,
+.leroux-home h2,
+.leroux-home h3 {
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.leroux-home p {
+  line-height: 1.75;
 }
 
 :focus-visible {
