@@ -3,7 +3,9 @@ import { brand, footer } from "@/content/global/brand";
  
 export function SiteFooter() {
   return (
-    <footer className="bg-(--surface-footer) text-(--text-inverse)">
+    <footer className="text-(--text-inverse) border-t border-white/5"
+  style={{ background: "var(--surface-footer-gradient)" }}
+>
       <Container>
         <div className="py-20 flex flex-col md:flex-row justify-between gap-12">
  
