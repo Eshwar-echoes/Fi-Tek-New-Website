@@ -15,8 +15,15 @@
   --surface-muted: #f8fafc;
   --surface-inverse: #0a0a0a;
   --surface-alt: #111827;
-  --surface-footer: #223035;
+  --surface-footer: #081423;
   --surface-black: #000000;
+  /* Layered gradient (this is the real upgrade) */
+  --surface-footer-gradient: linear-gradient(
+  180deg,
+  #0B1E35 0%,
+  #081423 50%,
+  #040B14 100%
+);
 
   /* Text */
   --text-primary: #0f172a;
@@ -260,4 +267,183 @@ p {
   }
 }
 
+
+.gwes-section {
+  background: linear-gradient(
+    180deg,
+    var(--leroux-capabilities-start) 0%,
+    var(--leroux-capabilities-end) 100%
+  );
+}
+ 
+.gwes-diagram-wrapper {
+  --gwes-blue: #006fba;
+  --text-primary: #f8fafc;
+  --text-secondary: #86868b;
+  --line-subtle: rgba(255, 255, 255, 0.05);
+  background-color: #030712;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+ 
+.gwes-diagram-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+ 
+.gwes-diagram-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+ 
+.gwes-diagram {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+}
+ 
+@keyframes radiate {
+  0% {
+    transform: scale(0.35);
+    opacity: 0.8;
+    stroke-width: 3px;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    stroke-width: 0.5px;
+  }
+}
+ 
+@keyframes slow-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+.gwes-diagram-wrapper .ambient-ring {
+  transform-origin: 400px 400px;
+  animation: slow-spin 120s linear infinite;
+}
+ 
+.gwes-diagram-wrapper .radiant-ring {
+  fill: none;
+  stroke: var(--gwes-blue);
+  transform-origin: 400px 400px;
+  animation: radiate 8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+ 
+.gwes-diagram-wrapper .radiant-ring.delay-1 {
+  animation-delay: 2.6s;
+}
+ 
+.gwes-diagram-wrapper .radiant-ring.delay-2 {
+  animation-delay: 5.3s;
+}
+ 
+.gwes-diagram-wrapper .segment {
+  cursor: pointer;
+  outline: none;
+}
+ 
+.gwes-diagram-wrapper .wedge {
+  fill: transparent;
+  stroke: var(--line-subtle);
+  stroke-width: 1px;
+  transition: fill 0.4s ease, stroke 0.4s ease;
+}
+ 
+.gwes-diagram-wrapper .content-group {
+  pointer-events: none;
+}
+ 
+.gwes-diagram-wrapper .seg-icon {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease, filter 0.3s ease;
+}
+ 
+.gwes-diagram-wrapper .seg-text {
+  fill: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  transition: fill 0.3s ease, text-shadow 0.3s ease;
+}
+ 
+.gwes-diagram-wrapper .segment:hover .wedge,
+.gwes-diagram-wrapper .segment:focus-visible .wedge {
+  fill: rgba(0, 111, 186, 0.05);
+  stroke: rgba(0, 111, 186, 0.6);
+}
+ 
+.gwes-diagram-wrapper .segment:hover .seg-icon,
+.gwes-diagram-wrapper .segment:focus-visible .seg-icon {
+  stroke: var(--text-primary);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+}
+ 
+.gwes-diagram-wrapper .segment:hover .seg-text,
+.gwes-diagram-wrapper .segment:focus-visible .seg-text {
+  fill: var(--text-primary);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+ 
+.gwes-diagram-wrapper .center-hub-base {
+  fill: #000000;
+  stroke: var(--line-subtle);
+  stroke-width: 1px;
+}
+ 
+.gwes-diagram-wrapper .center-hub-glass {
+  fill: rgba(0, 111, 186, 0.03);
+}
+ 
+.gwes-logo {
+  fill: var(--text-primary);
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+ 
+@media (max-width: 640px) {
+  .gwes-section {
+    padding: 3.5rem 0;
+  }
+ 
+  .gwes-diagram-wrapper {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+ 
+  .gwes-diagram-wrapper .seg-text {
+    font-size: 10px;
+  }
+ 
+  .gwes-logo {
+    font-size: 20px;
+  }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .gwes-diagram-wrapper .ambient-ring,
+  .gwes-diagram-wrapper .radiant-ring {
+    animation: none !important;
+    opacity: 0.1;
+  }
+}
 
